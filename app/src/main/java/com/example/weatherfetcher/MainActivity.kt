@@ -11,7 +11,5 @@ class MainActivity : AppCompatActivity() {
 
         val textViewHello = findViewById<TextView>(R.id.tvHello)
         textViewHello.text = "Hello from code!"
-
-
     }
 }
