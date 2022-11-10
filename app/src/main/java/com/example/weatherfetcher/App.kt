@@ -18,6 +18,6 @@ class App : Application() {
         }
 
         // чтобы приложение использовало темную тему в зависимости от системы
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
     }
 }

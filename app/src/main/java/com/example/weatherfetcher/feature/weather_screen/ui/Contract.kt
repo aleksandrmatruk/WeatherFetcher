@@ -1,11 +1,10 @@
 package com.example.weatherfetcher.feature.weather_screen.ui
 
 import com.example.weatherfetcher.base.Event
+import com.example.weatherfetcher.feature.weather_screen.domain.model.WeatherModel
 
 data class ViewState(
-    val isLoading: Boolean,
-    val title: String,
-    val temperature: String
+    val weather: WeatherModel
 )
 
 sealed class UiEvent : Event {
@@ -13,7 +12,10 @@ sealed class UiEvent : Event {
 }
 
 sealed class DataEvent: Event {
-    data class OnWeatherFetchSucceed(val temperature: String): DataEvent()
+
+    object LoadWeather: DataEvent()
+
+    data class OnWeatherFetchSucceed(val data: WeatherModel): DataEvent()
     data class OnWeatherFetchFailed(val error: Throwable): DataEvent()
 }
 
